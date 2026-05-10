@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Support</title>
+        <style>
+            :root {
+                --bg: #f6f6ef;
+                --surface: #ffffff;
+                --ink: #1a1a1a;
+                --muted: #555;
+                --accent: rgb(82, 163, 234);
+                --rule: #e3e3d8;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                background: var(--bg);
+                color: var(--ink);
+                font-family: Verdana, Geneva, sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .topbar {
+                background: var(--accent);
+                padding: 6px 12px;
+                font-weight: bold;
+                font-size: 13px;
+                color: var(--ink);
+                border-bottom: 2px solid var(--ink);
+            }
+
+            .topbar a {
+                color: var(--ink);
+                text-decoration: none;
+                margin-right: 14px;
+            }
+
+            .topbar a:hover {
+                text-decoration: underline;
+            }
+
+            .container {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 28px 20px 60px;
+            }
+
+            header.doc-header {
+                margin-bottom: 32px;
+                padding-bottom: 16px;
+                border-bottom: 1px solid var(--rule);
+            }
+
+            header.doc-header h1 {
+                margin: 0 0 6px;
+                font-size: 22px;
+                letter-spacing: -0.2px;
+            }
+
+            header.doc-header .meta {
+                color: var(--muted);
+                font-size: 12px;
+            }
+
+            section {
+                margin-bottom: 36px;
+            }
+
+            h2 {
+                font-size: 16px;
+                margin: 0 0 10px;
+                padding-bottom: 4px;
+                border-bottom: 1px solid var(--rule);
+            }
+
+            h3 {
+                font-size: 14px;
+                margin: 18px 0 6px;
+            }
+
+            p {
+                margin: 8px 0;
+            }
+
+            ul {
+                padding-left: 22px;
+            }
+            ul li {
+                margin: 4px 0;
+            }
+
+            a {
+                color: var(--accent);
+            }
+
+            footer {
+                text-align: center;
+                font-size: 12px;
+                color: var(--muted);
+                padding-top: 24px;
+                border-top: 1px solid var(--rule);
+            }
+
+            .missing-key {
+                background: #fff3cd;
+                border: 1px dashed #c69500;
+                padding: 1px 6px;
+                font-family: "SF Mono", Menlo, Consolas, monospace;
+                font-size: 12px;
+                color: #6b4f00;
+                border-radius: 2px;
+            }
+
+            @media (max-width: 600px) {
+                .container {
+                    padding: 20px 14px 40px;
+                }
+                header.doc-header h1 {
+                    font-size: 19px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topbar">
+            <a href="index.html">Legal</a>
+            <a href="support.html">Support</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="container">
+            <header class="doc-header">
+                <h1><span data-key="app_name"></span> — Support</h1>
+                <div class="meta">
+                    Last updated: <span data-key="last_updated"></span>
+                </div>
+            </header>
+
+            <section id="getting-help">
+                <h2>Getting Help</h2>
+                <p>
+                    Need a hand with <span data-key="app_name"></span>? Email us
+                    and we will get back to you as soon as we can.
+                </p>
+                <p>
+                    <strong>Support email:</strong>
+                    <a id="contact-link"
+                        ><span data-key="contact_email"></span
+                    ></a>
+                </p>
+                <p>To help us respond quickly, include:</p>
+                <ul>
+                    <li>
+                        App version and device model (e.g. iPhone 15, iOS 18.2)
+                    </li>
+                    <li>Steps to reproduce the issue</li>
+                    <li>Screenshots or screen recordings, if relevant</li>
+                </ul>
+            </section>
+
+            <section id="faq">
+                <h2>FAQ</h2>
+
+                <h3>Is this an official Hacker News app?</h3>
+                <p>
+                    No. <span data-key="app_name"></span> is an independent,
+                    unofficial client. It is not affiliated with, endorsed by,
+                    or connected to Hacker News or Y Combinator.
+                </p>
+
+                <h3>Is my Hacker News login safe?</h3>
+                <p>
+                    Chronicle is a device only, offline Hacker News reader.
+                    Credentials are not entered.
+                </p>
+
+                <h3>Do you collect analytics?</h3>
+                <p>None. No analytics, no crash data, no tracking.</p>
+
+                <h3>How do I report a bug or request a feature?</h3>
+                <p>
+                    Email
+                    <a id="contact-link-2"
+                        ><span data-key="contact_email"></span
+                    ></a>
+                    with a clear description. Feature requests welcome.
+                </p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>
+                    <span data-key="company_or_developer_name"></span><br />
+                    <span data-key="contact_email"></span><br />
+                    <span data-key="mailing_address"></span>
+                </p>
+            </section>
+
+            <footer>
+                © <span data-key="year"></span>
+                <span data-key="company_or_developer_name"></span>. All rights
+                reserved.
+            </footer>
+        </div>
+
+        <script src="legal-config.js"></script>
+        <script>
+            ;(function () {
+                if (typeof legalConfig === "undefined") {
+                    console.error(
+                        "legal-config.js did not load. Make sure it sits next to support.html.",
+                    )
+                    return
+                }
+
+                if (legalConfig.app_name) {
+                    document.title = "Support — " + legalConfig.app_name
+                }
+
+                const spans = document.querySelectorAll("[data-key]")
+                spans.forEach(function (el) {
+                    const key = el.getAttribute("data-key")
+                    const value = legalConfig[key]
+
+                    if (value !== undefined && value !== null && value !== "") {
+                        el.textContent = value
+                    } else {
+                        el.textContent = "[" + key.toUpperCase() + "]"
+                        el.classList.add("missing-key")
+                    }
+                })
+
+                if (legalConfig.contact_email) {
+                    const mailto = "mailto:" + legalConfig.contact_email
+                    const a1 = document.getElementById("contact-link")
+                    const a2 = document.getElementById("contact-link-2")
+                    if (a1) a1.setAttribute("href", mailto)
+                    if (a2) a2.setAttribute("href", mailto)
+                }
+            })()
+        </script>
+    </body>
+</html>
