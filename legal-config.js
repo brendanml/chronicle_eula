@@ -1,6 +1,6 @@
 const legalConfig = {
     app_name: "Chronicle",
-    company_or_developer_name: "oddsoftware",
+    company_or_developer_name: "Brendan Lynch",
     contact_email: "help@brendanml.com",
     mailing_address: "Kitchener, Ontario",
     effective_date: "2026-05-10",
