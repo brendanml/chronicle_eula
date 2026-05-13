@@ -4,7 +4,7 @@ const legalConfig = {
     contact_email: "help@brendanml.com",
     mailing_address: "Kitchener, Ontario",
     effective_date: "2026-05-10",
-    last_updated: "2026-05-10",
+    last_updated: "2026-05-13",
     year: "2026",
     governing_jurisdiction: "Ontario, Canada",
     venue_city_and_country: "Kitchener, Canada",
